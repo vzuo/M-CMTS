@@ -1,4 +1,4 @@
-__author__ = 'vzuo'
+__author__ = 'author'
 
 def removeWidebandCableInterface(controller_interface, widebandCableIndex):
     clearwidebandcable = ()
