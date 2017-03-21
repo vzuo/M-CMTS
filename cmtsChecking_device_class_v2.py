@@ -19,13 +19,13 @@ def disable_paging(remote_conn):
 def checkingcmts(devName, slots):
     #if __name__ == '__main__':
 
-    username = 'vzuo'
+    username = 'uname'
 
     #trust host variables
     #thname='th2.no.cg.lab.nms.mlb.inet'
-    thname='th2.no.cg.nms.mlb.inet'
+    thname='host1.domain.com'
     thip=socket.gethostbyname(thname)
-    thpassword='Shanshan0313'#raw_input('trust host password: ')
+    thpassword='password'#raw_input('trust host password: ')
 
     # Create instance of SSHClient object
     remote_conn_pre = paramiko.SSHClient()
@@ -53,20 +53,17 @@ def checkingcmts(devName, slots):
     #print output
 
     # VARIABLES THAT NEED CHANGED
-    dxdevnm =devName+'.int.shawcable.net' #'dx2nl.cg.lab.cmts.int.inet'#
-    #devnm='dx2nl.cg.lab.cmts.int.inet'
-    #devmgmtIp='10.159.226.9'
+    dxdevnm =devName+'.int.domain.net' 
+
     #print devnm
     devip=socket.gethostbyname(dxdevnm)
-    #devip='10.159.226.9'
-    #print devip
 
-    devpassword = 'eV@nB20'#raw_input('system password: ')
-    natpassword='C4e37x4F65b2'
+    devpassword = 'password'#raw_input('system password: ')
+    natpassword='password'
     denymessage='denied'
     password=devpassword
-    #remote_conn.send("ssh vzuo@"+devnm+"\n")
-    remote_conn.send("ssh vzuo@"+devip+"\n")
+    #
+    remote_conn.send("ssh admin@"+devip+"\n")
     # Wait for the command to complete
     time.sleep(0.5)
     remote_conn.send(password+'\n')
@@ -279,26 +276,7 @@ def checkingcmts(devName, slots):
 
 if __name__=="__main__":
     cmts_list = {
-                'dx2lm.lm': '0',
+                'dx2ab.cd': '0',
                 }
-    '''
-    'dx5sa.ed':'0',
-    'dx3ni.ed':'0',
-    'dx4sa.ed':'0',
-    'dx9tw.ed':'0',
-    'dx7tw.ed':'0',
-    'dx2tw.ed':'0',
-    'dx5ni.ed':'0',
-    'dx4cw.ed':'0',
-    'dx6cw.ed':'0',
-    'dx4rr.cg':'0',
-    'dx3rr.cg':'0',
-    'dx1ru.cg':('5/1','5/0'),
-    'dx4ru.cg':('7/1',),
-    'dx1cm.cg':('7/1','7/0'),
-    'dx5ra.cg':('8/1','8/0'),
-    '''
-    # done list = 'dx4cw.ed','dx6cw.ed','dx5ni.ed',
-    for cmtsName in cmts_list.keys():
-        #print cmtsName, cmts_list[cmtsName]
-        checkingcmts(cmtsName, cmts_list[cmtsName])
+  
+
