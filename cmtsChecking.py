@@ -18,14 +18,7 @@ def disable_paging(remote_conn):
 def checkingcmts(devName,cmd):
     if __name__ == '__main__':
 
-        username = 'vzuo'
-
-        #trust host variables
-        #thname='th2.no.cg.lab.nms.mlb.inet'
-        thname='th2.no.cg.nms.mlb.inet'
-        thip=socket.gethostbyname(thname)
-        thpassword='Shanshan0313'#raw_input('trust host password: ')
-
+       
         # Create instance of SSHClient object
         remote_conn_pre = paramiko.SSHClient()
         #remote_conn_pre.exec_command('enable')
@@ -63,12 +56,10 @@ def checkingcmts(devName,cmd):
         #devip='10.159.226.9'
         #print devip
         
-        devpassword = 'eV@nb2o'#raw_input('system password: ')
-        natpassword='C4e37x4F65b2'
-
+   
         password=devpassword
         #remote_conn.send("ssh vzuo@"+devnm+"\n")
-        remote_conn.send("ssh vzuo@"+devip+"\n")
+
         # Wait for the command to complete
         time.sleep(0.5)
         remote_conn.send(password+'\n')
