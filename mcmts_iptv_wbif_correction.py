@@ -14,9 +14,9 @@ if __name__ == "__main__":
     Some inaccurate info needs to be verified and manually managed by the implementing owner.
     """
 
-    print "\nYou can enter multiple devices with ',' eg: dx1hw.cg, dx2hh.cg \n"
+    print "\nYou can enter multiple devices with ',' eg:  \n"
 
-    cmtsNames = raw_input('Enter m-cmts device name: eg. dx1hw.cg\n>')
+    cmtsNames = raw_input('Enter m-cmts device name: eg. \n>')
     # new file
     cmts_names = []
     if "," in cmtsNames:
